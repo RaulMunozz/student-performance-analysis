@@ -1,4 +1,7 @@
 
+if (!file.exists("student_perfomance.csv")) {
+  stop("student_perfomance.csv not found. Run this script from the project directory.")
+}
 student <- read.csv("student_perfomance.csv", stringsAsFactors = TRUE)
 library(ggplot2)
 library(C50)
